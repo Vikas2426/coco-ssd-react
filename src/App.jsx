@@ -32,6 +32,8 @@ function App() {
 
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
+      webcamRef.current.width = videoWidth;
+      webcamRef.current.height = videoHeight;
 
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
@@ -52,7 +54,7 @@ function App() {
           width={70}
           height={70}
         />
-        <h1>Eye Spy</h1>
+        <h2>Eye Spy</h2>
       </header>
       <main>
         <Webcam
