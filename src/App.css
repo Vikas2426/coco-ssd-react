@@ -1,0 +1,37 @@
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.brand {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5em;
+  background-color: #33c3f0;
+  color: white;
+  gap: 1rem;
+  box-shadow: 0px 5px 5px rgb(219, 219, 219);
+}
+main {
+  width: 100vw;
+  height: 70vh;
+}
+.detectionContainer {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 390;
+  height: 500;
+}
+.webcam {
+  z-index: 8;
+}
+.canvas {
+  z-index: 9;
+}
