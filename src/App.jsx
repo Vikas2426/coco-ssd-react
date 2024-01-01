@@ -11,9 +11,11 @@ function App() {
   const canvasRef = useRef(null);
 
   const [timer, setTimer] = useState(null);
+  const [loading, setLoading] = useState(false);
   const start = async () => {
+    setLoading(true);
     const net = await cocossd.load();
-
+    setLoading(false);
     const timer = setInterval(() => {
       detect(net);
     }, 15);
@@ -71,7 +73,7 @@ function App() {
           timer ? stop() : start();
         }}
       >
-        {timer ? "Stop" : "Start"}
+        {timer ? "Stop" : loading ? "..." : "Start"}
       </button>
     </>
   );
